@@ -1,13 +1,13 @@
 import telebot
 import requests
 
-API_link = "https://api.telegram.org/bot2019823188:AAEd5p70bdR8HNEA-xlPUj9N12h5B9gQZmo"
+API_link = "https://api.telegram.org/bot2117684429:AAGpIZ6VJXnRJOZ3Vnu2yogRqeikYgiNt1Q"
 
 updates = requests.get(API_link + "/getUpdates").json()
 
-print (updates)
+#print (updates)
 
-bot = telebot.TeleBot('2019823188:AAEd5p70bdR8HNEA-xlPUj9N12h5B9gQZmo')
+bot = telebot.TeleBot('2117684429:AAGpIZ6VJXnRJOZ3Vnu2yogRqeikYgiNt1Q')
 
 keyboard1 = telebot.types.ReplyKeyboardMarkup()
 keyboard1.row('я соскучилась', 'мне грустно','расслабиться','что-нибудь')
@@ -36,8 +36,6 @@ def default_test(message):
         bot.send_message(message.chat.id, 'Зовем проотца русского стендапа')
         bot.send_message(338756016,"Маша is waitin!")
     elif message.text.lower() == 'расслабиться':
-        #global user_id
-        #user_id = message.from_user.username()
         bot.send_message(message.chat.id, 'https://www.youtube.com/watch?v=NuRjxnhfDhg')
         #if (status[2] == True):
         #bot.send_message(338756016,"чекай беседу")
